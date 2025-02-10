@@ -296,11 +296,13 @@ section.in-view {
   padding: 12px 16px;
   border: none;
   background: var(--primary-color);
-  color: var(--cta-text);
+  color: #000; /* text always black */
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 1.2rem; /* slightly larger font */
 }
+
 
 .filter-btn:hover {
   transform: scale(1.05);
@@ -450,9 +452,6 @@ body[dir="rtl"] {
 }
 
 /* Dark mode override for project category buttons */
-[data-theme="dark"] .filter-btn {
-  color: #000; /* Set text to black in dark mode */
-}
 
 /* Animate the project category buttons on page load */
 .filter-btn {
