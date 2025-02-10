@@ -450,3 +450,33 @@ footer {
     transform: translateY(0);
   }
 }
+/* Increase font sizes for Arabic (RTL) texts for better readability */
+body[dir="rtl"] {
+  /* Increase the base font-size slightly */
+  font-size: 1.1rem;
+}
+
+/* Adjust hero content */
+body[dir="rtl"] .hero-content h1 {
+  font-size: 4.5rem;  /* Increase hero heading */
+}
+
+body[dir="rtl"] .hero-content p {
+  font-size: 1.7rem;  /* Increase hero paragraph text */
+}
+
+/* Adjust general headings */
+body[dir="rtl"] h2 {
+  font-size: 2.5rem;
+}
+
+body[dir="rtl"] h3 {
+  font-size: 2rem;
+}
+
+/* Adjust paragraphs, links, and list items */
+body[dir="rtl"] p,
+body[dir="rtl"] li,
+body[dir="rtl"] a {
+  font-size: 1.2rem;
+}
