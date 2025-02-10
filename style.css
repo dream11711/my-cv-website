@@ -90,6 +90,10 @@ button:focus {
 [data-theme="dark"] .hero-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+/* Dark mode override for hero button text color */
+[data-theme="dark"] .hero-buttons a {
+  color: #000;
+}
 
 .hero-content {
   position: relative;
@@ -412,3 +416,36 @@ body[dir="rtl"] {
     font-size: 1.2rem;
   }
 }
+
+/* Animate hero content elements on load */
+.hero-content h1,
+.hero-content p,
+.hero-buttons a {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlide var(--animation-duration) ease-out forwards;
+}
+
+.hero-content h1 {
+  animation-delay: 0.5s;
+}
+
+.hero-content p {
+  animation-delay: 0.7s;
+}
+
+.hero-buttons a {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
