@@ -25,7 +25,7 @@
       about: {
         title: "About Me",
         summaryTitle: "Summary",
-        summary: "Passionate about technology and continuous learning, I built a strong academic foundation at Queen's University Belfast and gained hands‑on experience through challenging projects and roles. I specialize in secure software development, AI, and embedded systems.",
+        summary: "My robust academic background and technical skills enable me to excel in dynamic, collaborative work environments. I contribute to company success by applying my expertise and continuously expanding my abilities through hands-on experience and challenging projects that foster both personal and professional growth.",
         educationTitle: "Education",
         educationText: "<strong>BEng (S) Software Engineering</strong> – Queen's University Belfast, Second Class Honours",
         educationList: [
@@ -36,7 +36,7 @@
         skillsTitle: "Skills",
         skillsText: "<strong>Soft Skills:</strong> Teamwork, Communication, Problem Solving, Critical Thinking<br /><strong>Technical Skills:</strong> Windows, Kali Linux, Java, C++, Python, SQL, MySQL, HTML, CSS, Microsoft Office, Figma, SQL Server, IntelliJ IDEA, Visual Studio, Qt Creator",
         interestsTitle: "Interests",
-        interestsText: "I am particularly enthusiastic about AI, machine learning, cybersecurity, and cloud computing. I keep up with tech trends and experiment with emerging tools."
+        interestsText: "I am enthusiastic about applying technology and innovation to drive progress. I stay updated on industry trends and continually explore new tools and approaches to enhance my skills."
       },
       projects: {
         title: "Projects",
@@ -44,7 +44,7 @@
           all: "All",
           personal: "Personal Project",
           university: "University",
-          military: "Military"
+          military: "RAST"
         },
         showMore: "Show More",
         showLess: "Show Less",
@@ -182,9 +182,9 @@
       about: {
         title: "من أنا",
         summaryTitle: "الملخص",
-        summary: "شغوف بالتكنولوجيا والتعلم المستمر، بنيت أساساً أكاديمياً قوياً في جامعة كوينز بلفاست واكتسبت خبرة عملية من خلال مشاريع وتحديات متنوعة. أختص بتطوير البرمجيات الآمنة، والذكاء الاصطناعي، والأنظمة المدمجة.",
+        summary: "خلفيتي الأكاديمية المتينة ومهاراتي التقنية تُمكنني من التفوق في بيئات العمل الديناميكية والتعاونية. أُساهم في نجاح الشركة من خلال تطبيق خبرتي وتوسيع قدراتي باستمرار عبر التجارب العملية والمشاريع التحدّية التي تعزز النمو الشخصي والمهني",
         educationTitle: "التعليم",
-        educationText: "<strong>بكالوريوس (شرف) في هندسة البرمجيات</strong> – جامعة كوينز بلفاست، تقدير جيد (ثاني)",
+        educationText: "<strong>بكالوريوس (شرف) في هندسة البرمجيات</strong> – جامعة كوينز بلفاست، ",
         educationList: [
           "2021/22: قواعد البيانات، البرمجة الكائنية، مبادئ تصميم البرمجيات، العمارة والشبكات، البرمجة الإجرائية",
           "2022/23: هندسة وأنظمة البرمجيات، هياكل البيانات والخوارزميات، مقدمة في الذكاء الاصطناعي وتعلم الآلة، البرمجة الموجهة للخدمات، المهارات المهنية",
@@ -193,7 +193,7 @@
         skillsTitle: "المهارات",
         skillsText: "<strong>المهارات الشخصية:</strong> العمل الجماعي، التواصل، حل المشكلات، التفكير النقدي<br /><strong>المهارات التقنية:</strong> ويندوز، كالي لينكس، جافا، C++، بايثون، SQL، MySQL، HTML، CSS، مايكروسوفت أوفيس، فيجما، SQL Server، IntelliJ IDEA، Visual Studio، Qt Creator",
         interestsTitle: "الاهتمامات",
-        interestsText: "أنا متحمس بشكل خاص للذكاء الاصطناعي، وتعلم الآلة، والأمن السيبراني، والحوسبة السحابية. أتابع أحدث اتجاهات التكنولوجيا وأستمتع بتجربة الأدوات والأطر الجديدة."
+        interestsText: "أنا متحمس لتطبيق التكنولوجيا والابتكار لدفع عجلة التقدم. أتابع أحدث الاتجاهات في الصناعة وأستكشف باستمرار أدوات وأساليب جديدة لتعزيز مهاراتي."
       },
       projects: {
         title: "المشاريع",
@@ -201,7 +201,7 @@
           all: "الكل",
           personal: "مشروع شخصي",
           university: "جامعي",
-          military: "عسكري"
+          military: "راينميتال العربية للمحاكاة"
         },
         showMore: "عرض المزيد",
         showLess: "عرض أقل",
