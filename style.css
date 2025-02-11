@@ -65,8 +65,7 @@ button:focus {
   padding: 20px;
   margin: 20px 0;
 }
-
-/* HERO SECTION (Bright Mode) */
+/* HERO SECTION */
 #hero {
   position: relative;
   min-height: 100vh;
@@ -76,12 +75,31 @@ button:focus {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: url('el_102_1.jpg') no-repeat center center/cover;
 }
 
-/* HERO SECTION (Dark Mode Override) */
-[data-theme="dark"] #hero {
+/* Pseudo-element for background image (bright mode) */
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('el_102_1.jpg') no-repeat center center/cover;
+  z-index: -2;
+}
+
+/* Pseudo-element override for dark mode */
+[data-theme="dark"] #hero::before {
   background: url('hero-bg.jpg') no-repeat center center/cover;
+}
+
+/* Particle Canvas stays in the background */
+#particle-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: -1; /* Above the pseudo-element but below overlays and hero content */
+  background: transparent;
 }
 
 .hero-overlay {
@@ -89,7 +107,7 @@ button:focus {
   inset: 0;
   /* For light theme, a subtle overlay; in dark mode a slightly darker overlay */
   background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(0.5px);
   z-index: 1;
 }
 
@@ -108,6 +126,12 @@ button:focus {
   text-align: center;
   padding: 20px;
 }
+.hero-content h2 {
+  font-size: 1.5rem;  /* Adjust as needed */
+  color: #fff;      /* Or another color that works well with your design */
+  margin: 10px 0;   /* Add some spacing between your name and contact details */
+}
+
 
 /* Hero text colors change with theme */
 [data-theme="light"] .hero-content h1 {
@@ -427,6 +451,7 @@ footer {
 
 /* Animate hero content elements on load */
 .hero-content h1,
+.hero-content h2,
 .hero-content p,
 .hero-buttons a {
   opacity: 0;
@@ -437,11 +462,12 @@ footer {
 .hero-content h1 {
   animation-delay: 0.5s;
 }
-
+.hero-content h2 {
+  animation-delay: 0.6s; /* You can adjust this delay as desired */
+}
 .hero-content p {
   animation-delay: 0.7s;
 }
-
 .hero-buttons a {
   animation-delay: 0.9s;
 }
