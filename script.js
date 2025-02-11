@@ -16,6 +16,7 @@
       },
       header: {
         title: "Abdulaziz Al-Rabiah",
+	subtitle: "I am a Software Engineer from Queen's University",
         contact: "📞 +966550480974 | ✉️ abdulaziz_alrabiah@outlook.sa"
       },
       hero: {
@@ -27,7 +28,7 @@
         summaryTitle: "Summary",
         summary: "My robust academic background and technical skills enable me to excel in dynamic, collaborative work environments. I contribute to company success by applying my expertise and continuously expanding my abilities through hands-on experience and challenging projects that foster both personal and professional growth.",
         educationTitle: "Education",
-        educationText: "<strong>BEng (S) Software Engineering</strong> – Queen's University Belfast, Second Class Honours",
+        educationText: "<strong>BEng Software Engineering</strong> – Queen's University Belfast, Second Class Honours",
         educationList: [
           "2021/22: Databases, OOP, Software Design Principles, Architecture & Networks, Procedural Programming",
           "2022/23: Software Engineering & Systems Development, Data Structures & Algorithms, Intro to AI & ML, Service‑Oriented Programming, Professional Skills",
@@ -173,6 +174,7 @@
       },
       header: {
         title: "عبدالعزيز الربيعة",
+	subtitle: "مهندس برمجيات من جامعة كوينز",
         contact: "📞 +966550480974 | ✉️ abdulaziz_alrabiah@outlook.sa"
       },
       hero: {
@@ -414,9 +416,11 @@
   };
 
   const initTheme = () => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  };
+  // Force dark mode every time by ignoring any saved theme:
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+};
+
 
   // Initialize Particle Animation for the hero section
   const initParticles = () => {
@@ -453,7 +457,7 @@
         // In light mode, use a bright teal; in dark mode, use a muted gray
         ctx.fillStyle = isDark
           ? `rgba(100,100,100,${alpha})`
-          : `rgba(3,218,198,${alpha})`;
+          : `rgba(210,180,140,${alpha})`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fill();
