@@ -16,7 +16,7 @@
       },
       header: {
         title: "Abdulaziz Al-Rabiah",
-	subtitle: "I am a Software Engineer from Queen's University",
+	subtitle: "I am a Software Engineer from Queen's University Working at Rheinmetall Arabia for Simulation and Training",
         contact: "📞 +966550480974 | ✉️ abdulaziz_alrabiah@outlook.sa"
       },
       hero: {
