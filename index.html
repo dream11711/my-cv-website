@@ -17,12 +17,21 @@
   <meta property="og:type" content="website">
 </head>
 <body>
+  <div id="scroll-progress"></div>
+
+  <body>
+    <div id="preloader">
+      <div class="spinner"></div>
+      <div class="loading-text">Loading...</div>
+    </div>
+    
+  
   <!-- Hero Section -->
   <header id="hero" class="reveal">
     <canvas id="particle-canvas"></canvas>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 data-i18n="header.title">Abdulaziz Al-Rabiah</h1>
+      <h1 id="hero-headline" data-i18n="header.title">Abdulaziz Al-Rabiah</h1>
       <h2 data-i18n="header.subtitle">I am a Software Engineer from Queen's University Working at Rheinmetall Arabia for Simulation and Training</h2>
       <p data-i18n="header.contact">📞 +966550480974 | ✉️ abdulaziz_alrabiah@outlook.sa</p>
       <div class="hero-buttons">
@@ -143,5 +152,15 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <div id="cursor-tail"></div>
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div id="modal-details"></div>
+    </div>
+  </div>
+
+  <button id="back-to-top">&#8679;</button>
 </body>
 </html>
