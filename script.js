@@ -2,6 +2,14 @@
 (() => {
   'use strict';
 
+// Parallax effect: update CSS variable on scroll
+window.addEventListener('scroll', () => {
+  const parallaxSpeed = 0.5;
+  const offset = window.scrollY * parallaxSpeed;
+  document.documentElement.style.setProperty('--parallax-offset', `${offset}px`);
+});
+
+
   // Translation Data for English and Arabic
   const translations = {
     en: {
@@ -425,6 +433,14 @@
   // Initialize Particle Animation for the hero section
   const initParticles = () => {
     const canvas = document.getElementById('particle-canvas');
+    let mouseX = null;
+    let mouseY = null;
+    window.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+    });
+
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     let particlesArray = [];
@@ -453,8 +469,7 @@
       }
       draw() {
         const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-        const alpha = 0.4 + Math.random() * 0.2;
-        // In light mode, use a bright teal; in dark mode, use a muted gray
+        const alpha = 0.3 + Math.random() * 0.2;
         ctx.fillStyle = isDark
           ? `rgba(100,100,100,${alpha})`
           : `rgba(210,180,140,${alpha})`;
@@ -462,13 +477,31 @@
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fill();
       }
+      
       update() {
         if (this.x + this.radius > canvas.width || this.x - this.radius < 0) this.vx = -this.vx;
         if (this.y + this.radius > canvas.height || this.y - this.radius < 0) this.vy = -this.vy;
         this.x += this.vx;
         this.y += this.vy;
+        
+        // Mouse interaction: gentler repulsion from the cursor
+        if (mouseX !== null && mouseY !== null) {
+          const dx = this.x - mouseX;
+          const dy = this.y - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          const minDistance = 80;
+          if (distance < minDistance) {
+            const force = (minDistance - distance) / minDistance;
+            // Lower multiplier for a gentler effect
+            this.vx += (dx / distance) * force * 0.05;
+            this.vy += (dy / distance) * force * 0.05;
+          }
+        }
+        
         this.draw();
       }
+      
+      
     }
 
     const initParticlesArray = () => {
@@ -483,6 +516,8 @@
       particlesArray.forEach(particle => particle.update());
       requestAnimationFrame(animateParticles);
     };
+    
+    
 
     initParticlesArray();
     animateParticles();
@@ -499,11 +534,45 @@
 
   // DOMContentLoaded – Initialize everything
   document.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      preloader.style.opacity = 0;
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500);
+    });
+    
+
     initTheme();
     initLanguage();
     initParticles();
     initScrollReveal();
 
+    const modal = document.getElementById('project-modal');
+   const modalDetails = document.getElementById('modal-details');
+    const closeButton = document.querySelector('.close-button');
+
+    // Attach click event to each project card
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      // Populate modal with the card's inner HTML (or customize with project data)
+      modalDetails.innerHTML = card.innerHTML;
+      modal.style.display = 'flex';
+    });
+  });
+  
+  // Close modal when clicking the close button
+  closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  
+  // Close modal when clicking outside the modal content
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+    
     // Theme Toggle Button Event Listener
     document.getElementById("theme-toggle-btn").addEventListener("click", toggleTheme);
 
@@ -543,5 +612,79 @@
         targetSection.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    // Cursor Tail Effect
+    const cursorTail = document.getElementById('cursor-tail');
+    let targetX = window.innerWidth / 2, targetY = window.innerHeight / 2;
+    let tailX = targetX, tailY = targetY;
+
+    document.addEventListener('mousemove', (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+    });
+
+    function animateCursorTail() {
+    tailX += (targetX - tailX) * 0.1;
+    tailY += (targetY - tailY) * 0.1;
+    cursorTail.style.transform = `translate(${tailX}px, ${tailY}px)`;
+    requestAnimationFrame(animateCursorTail);
+    }
+    animateCursorTail();
+// Back-to-Top Button Functionality
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    backToTop.classList.add('show');
+  } else {
+    backToTop.classList.remove('show');
+  }
+});
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+function typeWriterEffect() {
+  const headline = document.getElementById("hero-headline");
+  const fullText = headline.textContent;
+  headline.textContent = "";
+  let i = 0;
+  const speed = 150; // milliseconds per character
+  const timer = setInterval(() => {
+    if (i < fullText.length) {
+      headline.textContent += fullText.charAt(i);
+      i++;
+    } else {
+      clearInterval(timer);
+    }
+  }, speed);
+}
+typeWriterEffect();
+
+// Animate Skill Progress Bars on scroll
+const skillProgressBars = document.querySelectorAll('.progress');
+const progressObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const percentage = entry.target.getAttribute('data-percentage');
+      entry.target.style.width = percentage + '%';
+      progressObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+skillProgressBars.forEach(bar => {
+  progressObserver.observe(bar);
+});
+
+// Scroll Progress Indicator
+const scrollProgress = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  scrollProgress.style.width = progress + '%';
+});
+
   });
 })();
