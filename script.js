@@ -62,7 +62,7 @@ window.addEventListener('scroll', () => {
             title: "Arresting System Control Software",
             subtitle: "Military Application",
             description: "A custom control interface for a military aircraft arresting system featuring dynamic status lights and real‑time monitoring.",
-            technologies: "Python, Android, UI Design",
+            technologies: "Kotlin, Android studio, UI Design",
             category: "military"
           },
           {
@@ -149,12 +149,32 @@ window.addEventListener('scroll', () => {
         description: "Explore my work on GitHub:",
         linkText: "Visit my GitHub Profile"
       },
-      experience: {
-        title: "Experience",
-        details: "Software Engineer – Rheinmetall Arabia Simulation and Training (RAST)",
-        period: "July 2024 – Present",
-        description: "Developing software for a military aircraft arresting system, including designing and implementing control interfaces for custom‑built tablets."
-      },
+      // …inside translations.en…
+experience: {
+  details: "Software Engineer – Rheinmetall Arabia Simulation and Training (RAST)",
+  period: "July 2024 – Present",
+  description: `
+Developed and implemented control software for the RSAF military arresting systems (BAK14 & BAK15) using Kotlin. The app enables control towers to operate and monitor arresting systems in real time. A PLC simulator was also built in Python for testing.
+
+The system auto‑configures the runway, BAK, and system ID, and displays key parameters:
+<ul>
+  <li>Air Compressor: ON / OFF</li>
+  <li>Water Discharge: High/Low level with pump status</li>
+  <li>Exhaust Fan: ON / OFF</li>
+  <li>PIT Temperature & Moisture</li>
+  <li>Hydraulic Pressure (BAK15 only): “&lt;1900 PSI” or “≥2200 PSI”</li>
+</ul>
+
+Two versions were developed:
+<ul>
+  <li>TCP‑based, using bit‑level command exchange</li>
+  <li>Multicast‑based, with structured 16‑ and 32‑byte messages</li>
+</ul>
+
+Features include: power & comm failure indicators, heartbeat monitoring, and maintenance lockout mode.
+`
+}
+,
       courses: {
         title: "Courses & Events",
         events: [
@@ -220,7 +240,7 @@ window.addEventListener('scroll', () => {
             title: "نظام التحكم في مهبط الطائرات",
             subtitle: "تطبيق عسكري",
             description: "تم تطوير واجهة تحكم مخصصة لنظام مهبط الطائرات العسكرية مع أضواء حالة ديناميكية ومراقبة في الوقت الحقيقي.",
-            technologies: "بايثون، أندرويد، تصميم الواجهة",
+            technologies: "كوتلين، أندرويد ستوديو، تصميم الواجهة",
             category: "military"
           },
           {
@@ -307,12 +327,32 @@ window.addEventListener('scroll', () => {
         description: "استعرض أعمالي على GitHub:",
         linkText: "زيارة ملفي على GitHub"
       },
-      experience: {
-        title: "الخبرات",
-        details: "مهندس برمجيات – Rheinmetall Arabia Simulation and Training (RAST)",
-        period: "يوليو 2024 – حتى الآن",
-        description: "تطوير برمجيات لنظام مهبط الطائرات العسكرية، بما في ذلك تصميم وتنفيذ واجهات التحكم للأجهزة اللوحية المخصصة."
-      },
+      // …inside translations.ar…
+experience: {
+  details: "مهندس برمجيات – شركة راينميتال العربية للمحاكاة والتدريب (RAST)",
+  period: "يوليو 2024 – حتى الآن",
+  description: `
+قمت بتطوير برنامج تحكم لنظام الإيقاف العسكري (BAK14 و BAK15) التابع للقوات الجوية باستخدام Kotlin، مع محاكي PLC لاختبار النظام تم إنشاؤه بلغة بايثون. التطبيق يتيح لأبراج المراقبة التحكم والمتابعة في الوقت الحقيقي.
+
+النظام يضبط تلقائيًا المدرج وBAK ومعرّف النظام، ويعرض معلومات مهمة:
+<ul>
+  <li>الضاغط الهوائي: يعمل / متوقف</li>
+  <li>تصريف المياه: حسب مستوى الماء وحالة المضخة</li>
+  <li>مروحة العادم: تعمل / متوقفة</li>
+  <li>درجة الحرارة والرطوبة في الحفرة</li>
+  <li>ضغط الهيدروليك (BAK15 فقط): أقل من 1900 أو أكثر من 2200 PSI</li>
+</ul>
+
+تم تطوير نسختين:
+<ul>
+  <li>باستخدام TCP وأوامر بالبت</li>
+  <li>باستخدام Multicast ورسائل 16 و32 بايت</li>
+</ul>
+
+الميزات: مؤشر انقطاع الطاقة، فقدان الاتصال (heartbeat)، ووضع صيانة يمنع الأوامر.
+`
+}
+,
       courses: {
         title: "الدورات والفعاليات",
         events: [
