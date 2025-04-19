@@ -66,9 +66,9 @@ window.addEventListener('scroll', () => {
             category: "military"
           },
           {
-            title: "Python PC Monitoring App",
+            title: "Arresting System testing App",
             subtitle: "Personal Project",
-            description: "A desktop-based application to monitor and simulate system statuses using Python and Tkinter.",
+            description: "A desktop-based application that is connected to the arresting system tablet via ip to test and simulate arresting system statuses and send the testing data in bytes using Python and Tkinter.",
             technologies: "Python, Tkinter, PyQt",
             category: "personal"
           },
@@ -224,9 +224,9 @@ window.addEventListener('scroll', () => {
             category: "military"
           },
           {
-            title: "تطبيق مراقبة الكمبيوتر ببايثون",
+            title: "تطبيق اختبار نظام التحكم في مهبط الطائرات",
             subtitle: "مشروع شخصي",
-            description: "تم إنشاء تطبيق مراقبة للكمبيوتر لاختبار برمجيات التحكم مع واجهة رسومية تحاكي تحديثات الحالة والأعطال باستخدام بايثون وTkinter.",
+            description: "تطبيق بايثون يتصل من سطح المكتب الى جهاز لوحي خاص بنظام الايقاف عن طريق عنوان IP لاختبار ومحاكاة حالات نظام الايقاف وارسال بيانات الاختبار بالبايت",
             technologies: "بايثون، Tkinter، PyQt",
             category: "personal"
           },
