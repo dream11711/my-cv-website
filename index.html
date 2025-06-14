@@ -24,10 +24,10 @@
 <body>
   <div id="scroll-progress"></div>
 
-  <body>
+  
     <div id="preloader">
-      <div class="spinner-wrapper">
-        <div class="spinner"></div>
+      <div class="loader-dots">
+        <div></div><div></div><div></div>
       </div>
       <div class="loading-text">Loading...</div>
     </div>
@@ -135,17 +135,32 @@
     <section id="experience" class="reveal">
       <div class="section-inner glass">
         <h2 data-i18n="experience.title">Experience</h2>
+    
+        <!-- Past Role -->
         <div class="experience-card">
-          <h3 data-i18n="experience.details">
+          <h3 data-i18n="experience.past.details">
             Software Engineer – Rheinmetall Arabia Simulation and Training (RAST)
           </h3>
-          <p data-i18n="experience.period">July 2024 – Present</p>
-          <p data-i18n="experience.description">
-            Developing software for a military aircraft arresting system, including designing and implementing control interfaces for custom‑built tablets.
-          </p>
+          <p class="period" data-i18n="experience.past.period">July 2024 – May 2025</p>
+          <div class="job-description" data-i18n="experience.past.description">
+            <!-- real HTML (ul/li/p) will go here -->
+          </div>
+        </div>
+    
+        <!-- Current Role -->
+        <div class="experience-card">
+          <h3 data-i18n="experience.current.details">
+            Assistant Analyst (Technologies & Solutions Operations) – Digital Government Authority
+          </h3>
+          <p class="period" data-i18n="experience.current.period">June 2025 – Present</p>
+          <div class="job-description" data-i18n="experience.current.description">
+            <!-- real HTML (ul/li/p) will go here -->
+          </div>
         </div>
       </div>
     </section>
+    
+    
   </main>
 
     <!-- Footer -->
