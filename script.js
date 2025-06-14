@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
       },
       header: {
         title: "Abdulaziz Al-Rabiah",
-	subtitle: "Assistant Analyst (Technologies & Solutions Operations) at the Digital Government Authority",
+	subtitle: "Assistant Analyst Technologies & Solutions Operations at the Digital Government Authority",
         contact: "📞 +966550480974 | ✉️ abdulaziz_alrabiah@outlook.sa"
       },
       hero: {
