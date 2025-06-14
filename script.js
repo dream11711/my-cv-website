@@ -172,7 +172,7 @@ experience: {
     `
   },
   current: {
-    details: "Assistant Analyst (Technologies & Solutions Operations) – Digital Government Authority",
+    details: "Assistant Analyst Technologies & Solutions Operations at Digital Government Authority",
     period:  "June 2025 – Present",
     description: `
       <ul>
@@ -364,7 +364,7 @@ experience: {
     `
   },
   current: {
-    details: "مساعد محلل تشغيل التقنيات والحلول – الهيئة الرقمية الحكومية",
+    details: "مساعد محلل تشغيل التقنيات والحلول – هيئة الحكومة الرقمية",
     period:  "يونيو 2025 – حتى الآن",
     description: `
       <ul>
