@@ -863,3 +863,11 @@ footer .section-inner {
 .experience-card .job-description p {
   margin-bottom: 1rem;
 }
+
+html {
+  /* leave your existing scroll-behavior */
+  scroll-behavior: smooth;
+  
+  /* push every “scroll-to” down by the height of your navbar */
+  scroll-padding-top: 80px;  /* tweak this value to match your nav height */
+}
