@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
       },
       header: {
         title: "Abdulaziz Al-Rabiah",
-	subtitle: "I am a Software Engineer from Queen's University Working at Rheinmetall Arabia for Simulation and Training",
+	subtitle: "Assistant Analyst (Technologies & Solutions Operations) at the Digital Government Authority",
         contact: "📞 +966550480974 | ✉️ abdulaziz_alrabiah@outlook.sa"
       },
       hero: {
@@ -57,6 +57,7 @@ window.addEventListener('scroll', () => {
         },
         showMore: "Show More",
         showLess: "Show Less",
+        technologiesLabel: "Technologies:",
         projectCards: [
           {
             title: "Arresting System Control Software",
@@ -150,31 +151,41 @@ window.addEventListener('scroll', () => {
         linkText: "Visit my GitHub Profile"
       },
       // …inside translations.en…
+// … inside translations.en …
 experience: {
-  details: "Software Engineer – Rheinmetall Arabia Simulation and Training (RAST)",
-  period: "July 2024 – Present",
-  description: `
-Developed and implemented control software for the RSAF military arresting systems (BAK14 & BAK15) using Kotlin. The app enables control towers to operate and monitor arresting systems in real time. A PLC simulator was also built in Python for testing.
+  title: "Experience",
+  past: {
+    details: "Software Engineer – Rheinmetall Arabia Simulation and Training (RAST)",
+    period:  "July 2024 – May 2025",
+    description: `
+      <p>Developed and implemented control software for the RSAF military arresting systems (BAK14 & BAK15) using Kotlin. A PLC simulator was also built in Python for testing.</p>
+      <ul>
+        <li>Air Compressor: ON / OFF</li>
+        <li>Water Discharge: High/Low level with pump status</li>
+        <li>Exhaust Fan: ON / OFF</li>
+        <li>PIT Temperature & Moisture</li>
+        <li>Hydraulic Pressure (BAK15 only): “<1900 PSI” or “≥2200 PSI”</li>
+        <li>TCP-based, using bit-level command exchange</li>
+        <li>Multicast-based, with structured 16- and 32-byte messages</li>
+      </ul>
+      <p>Daily tasks: designed and developed new features, wrote unit tests, maintained technical documentation, and collaborated with QA and cross-functional teams.</p>
+    `
+  },
+  current: {
+    details: "Assistant Analyst (Technologies & Solutions Operations) – Digital Government Authority",
+    period:  "June 2025 – Present",
+    description: `
+      <ul>
+        <li>Monitor and optimize performance of digital service platforms, ensuring high availability and swift incident response.</li>
+        <li>Configure, deploy, and test new solution modules, collaborating with cross-functional teams to meet stakeholder requirements.</li>
+        <li>Analyze operational metrics and prepare technical reports to support continuous improvement.</li>
+        <li>Provide second-line support for platform issues, troubleshooting and coordinating with vendors as needed.</li>
+        <li>Maintain up-to-date operational documentation and runbooks.</li>
+      </ul>
+    `
+  }
+},
 
-The system auto‑configures the runway, BAK, and system ID, and displays key parameters:
-<ul>
-  <li>Air Compressor: ON / OFF</li>
-  <li>Water Discharge: High/Low level with pump status</li>
-  <li>Exhaust Fan: ON / OFF</li>
-  <li>PIT Temperature & Moisture</li>
-  <li>Hydraulic Pressure (BAK15 only): “&lt;1900 PSI” or “≥2200 PSI”</li>
-</ul>
-
-Two versions were developed:
-<ul>
-  <li>TCP‑based, using bit‑level command exchange</li>
-  <li>Multicast‑based, with structured 16‑ and 32‑byte messages</li>
-</ul>
-
-Features include: power & comm failure indicators, heartbeat monitoring, and maintenance lockout mode.
-`
-}
-,
       courses: {
         title: "Courses & Events",
         events: [
@@ -202,7 +213,7 @@ Features include: power & comm failure indicators, heartbeat monitoring, and m
       },
       header: {
         title: "عبدالعزيز الربيعة",
-	subtitle: "مهندس برمجيات من جامعة كوينز",
+	subtitle: "مساعد محلل تشغيل التقنيات والحلول في هيئة الحكومة الرقمية ",
         contact: "📞 +966550480974 | ✉️ abdulaziz_alrabiah@outlook.sa"
       },
       hero: {
@@ -235,6 +246,8 @@ Features include: power & comm failure indicators, heartbeat monitoring, and m
         },
         showMore: "عرض المزيد",
         showLess: "عرض أقل",
+        technologiesLabel: "التقنيات:",
+
         projectCards: [
           {
             title: "نظام التحكم في مهبط الطائرات",
@@ -327,32 +340,46 @@ Features include: power & comm failure indicators, heartbeat monitoring, and m
         description: "استعرض أعمالي على GitHub:",
         linkText: "زيارة ملفي على GitHub"
       },
-      // …inside translations.ar…
+
+
+
+// …inside translations.ar…
 experience: {
-  details: "مهندس برمجيات – شركة راينميتال العربية للمحاكاة والتدريب (RAST)",
-  period: "يوليو 2024 – حتى الآن",
-  description: `
-قمت بتطوير برنامج تحكم لنظام الإيقاف العسكري (BAK14 و BAK15) التابع للقوات الجوية باستخدام Kotlin، مع محاكي PLC لاختبار النظام تم إنشاؤه بلغة بايثون. التطبيق يتيح لأبراج المراقبة التحكم والمتابعة في الوقت الحقيقي.
+  title: "الخبرات",
+  past: {
+    details: "مهندس برمجيات – شركة راينميتال العربية للمحاكاة والتدريب (RAST)",
+    period:  "يوليو 2024 – مايو 2025",
+    description: `
+      <p>قمت بتطوير وتنفيذ برنامج تحكم لنظام الإيقاف العسكري (BAK14 و BAK15) باستخدام Kotlin. تم أيضاً تطوير محاكي PLC بلغة Python لاختبار النظام.</p>
+      <ul>
+        <li>الضاغط الهوائي: يعمل / متوقف</li>
+        <li>تصريف المياه: حسب مستوى الماء وحالة المضخة</li>
+        <li>مروحة العادم: تعمل / متوقفة</li>
+        <li>درجة الحرارة والرطوبة في الحفرة</li>
+        <li>ضغط الهيدروليك (BAK15 فقط): أقل من 1900 أو ≥2200 PSI</li>
+        <li>TCP بالبت-level</li>
+        <li>Multicast برسائل 16 و32 بايت</li>
+      </ul>
+      <p>المهام اليومية: تصميم وتطوير ميزات جديدة، كتابة اختبارات الوحدة، صيانة الوثائق التقنية، والتعاون مع فرق ضمان الجودة والفرق متعددة التخصصات.</p>
+    `
+  },
+  current: {
+    details: "مساعد محلل تشغيل التقنيات والحلول – الهيئة الرقمية الحكومية",
+    period:  "يونيو 2025 – حتى الآن",
+    description: `
+      <ul>
+        <li>مراقبة وتحسين أداء منصات الخدمات الرقمية، وضمان التوافر العالي والاستجابة السريعة للحوادث.</li>
+        <li>تكوين ونشر واختبار وحدات الحلّ الجديدة، بالتعاون مع فرق متعددة التخصصات لتلبية متطلبات أصحاب المصلحة.</li>
+        <li>تحليل المقاييس التشغيلية وإعداد التقارير الفنية لدعم التحسين المستمر.</li>
+        <li>تقديم الدعم الفني من المستوى الثاني لمشكلات المنصة، واستكشاف الأخطاء وإصلاحها والتنسيق مع البائعين عند الحاجة.</li>
+        <li>الحفاظ على وثائق التشغيل والإرشادات (Runbooks) محدثة.</li>
+      </ul>
+    `
+  }
+},
+// …continue with footer, etc…
 
-النظام يضبط تلقائيًا المدرج وBAK ومعرّف النظام، ويعرض معلومات مهمة:
-<ul>
-  <li>الضاغط الهوائي: يعمل / متوقف</li>
-  <li>تصريف المياه: حسب مستوى الماء وحالة المضخة</li>
-  <li>مروحة العادم: تعمل / متوقفة</li>
-  <li>درجة الحرارة والرطوبة في الحفرة</li>
-  <li>ضغط الهيدروليك (BAK15 فقط): أقل من 1900 أو أكثر من 2200 PSI</li>
-</ul>
 
-تم تطوير نسختين:
-<ul>
-  <li>باستخدام TCP وأوامر بالبت</li>
-  <li>باستخدام Multicast ورسائل 16 و32 بايت</li>
-</ul>
-
-الميزات: مؤشر انقطاع الطاقة، فقدان الاتصال (heartbeat)، ووضع صيانة يمنع الأوامر.
-`
-}
-,
       courses: {
         title: "الدورات والفعاليات",
         events: [
@@ -409,11 +436,12 @@ experience: {
       const card = document.createElement('div');
       card.className = 'project-card';
       card.setAttribute('data-category', project.category);
+      const techLabel = getNestedTranslation(translations[lang], 'projects.technologiesLabel');
       card.innerHTML = `
         <h3>${project.title}</h3>
         <p><em>${project.subtitle}</em></p>
         <p>${project.description}</p>
-        <p><strong>Technologies:</strong> ${project.technologies}</p>
+        <p><strong>${techLabel}</strong> ${project.technologies}</p>
       `;
       if (!projectsExpanded && index >= initialVisibleCount) {
         card.classList.add("hidden");
